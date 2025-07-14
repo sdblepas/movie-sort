@@ -1,0 +1,14 @@
+<!doctype html>
+<title>Scan Results</title>
+<h1>Scan Results</h1>
+<table border="1">
+<tr><th>File</th><th>Destination</th><th>Metadata</th></tr>
+{% for m in movies %}
+<tr>
+<td>{{m.file}}</td>
+<td>{{m.dest}}</td>
+<td>{{m.meta.title}} ({{m.meta.year}})</td>
+</tr>
+{% endfor %}
+</table>
+<p><a href="/">Back</a></p>
