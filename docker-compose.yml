@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  movie-sorter:
+    build: .
+    ports:
+      - "7080:7080"
+    volumes:
+      - /volume1/Videos1:/data1
+      - /volume2/Videos2/Film:/data2
+      - /volume7/Videos7/Film:/data3
+    env_file:
+      - ./env.cfg
+    restart: unless-stopped

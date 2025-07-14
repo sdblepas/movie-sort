@@ -1,0 +1,11 @@
+<!doctype html>
+<title>Movie Sorter</title>
+<h1>Movie Sorter</h1>
+<p>Configured paths:</p>
+<ul>
+{% for p in paths %}
+<li>{{p}}</li>
+{% endfor %}
+</ul>
+<p>TMDb API Key: {{ 'set' if api_key else 'not set' }}</p>
+<p><a href="{{ url_for('scan') }}">Scan Movies</a></p>
